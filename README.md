@@ -49,7 +49,7 @@ $H_0 : \beta_{variant} = 0$
 
 $H_A : \beta_{variant} \neq 0$
 
-![alt text](https://github.com/stevturn3/Simulated_GWAS/blob/main/Turnbull_manhattan.png?raw=true)
+![alt_text](https://github.com/stevturn3/Simulated_GWAS/blob/main/Turnbull_manhattan.png?raw=true)
 
 We create a Manhattan plot to see how chromosomes are correlated to HDL Cholesterol. The red line indicates the negative log-probability of the significance level. Consequently, any SNP above this line is labeled significant in terms of its respective association test - thereby rejecting the respective null hypotheses.  In total, 65,875 SNPs(7.9% of SNPs) are labeled significant. Chromosome two has the highest percentage (ratio of significant/total) of significant SNPs, about 9%, and chromosome 11 has the lowest percentage of significant SNPs, about 7%. However, all of the chromosomes are within two percent of chromosome two’s ratio, thus we can reason that our results show that each chromosome has a significant effect on the HDL cholesterol levels of the individuals. Chromosomes 15,16 and 18 have SNPs that extremely significant (very tiny p-values) and would be interesting SNPs to study in an experimental fashion. It is also important to note that valleys, such as around 9 and 1, found in the Manhattan plot are regions of the chromosomes that very likely have no association with HDL Cholesterol levels and likely would not be labeled significant for any reasonable significance level.
 
@@ -57,7 +57,7 @@ We create a Manhattan plot to see how chromosomes are correlated to HDL Choleste
 
 We compare our results to hose of a ukBB GWAS on the same subject. We expect some differences in results do to our lack of data. Here we display the minimum values on each chromsome.
 
-![alt text]([https://github.com/stevturn3/Simulated_GWAS/blob/main/Turnbull_MinP.png]?raw=true)
+![alt_text](https://github.com/stevturn3/Simulated_GWAS/blob/main/Turnbull_MinP.png?raw=true)
 
 Additionally, we take a look at three grouping of these SNPs. We take the UK bio bank p-values as the true p-values of our experiment as it was performed in a similar way but including more data.
 
