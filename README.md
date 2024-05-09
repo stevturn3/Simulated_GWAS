@@ -1,3 +1,7 @@
+# Goals
+
+The goal of this project is to understand what is going on in a GWAS, understand compuational problems with large data, and understrand how to interpret and cross-reference GWAS results in practice.
+
 # Introduction
 
 Running a GWAS on HDL Cholesterol Levels where we wish to establish relationships between SNP (Single Nucelotide Polymoforisms) and gene expression in HDL leves on 2,504 individuals from the the 1000 Genomes Project. A GWAS - Genome Wide Association Test - is used to perform an association test on many different SNPs at once to determine if their effect on the phenotype - in this case simulated HDL Cholesterol levels that have been transformed - is significant. A GWAS typically occurs in 5 steps : Sample collection → genotyping → quality control → association analysis → supplemental analysis. The data received has already been quality controlled and thus the focus of this paper will be on the association analysis of this process. 
