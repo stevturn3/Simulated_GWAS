@@ -32,7 +32,7 @@ phenotype.txt : Phenotype values for each individual:
   1. Family ID
   2. Individual ID
   3. Phenotype Value
-  4. 
+     
 # Methods 
 
 Our PLINK GWAS returned promising results in regards to association between many SNPs and our simulated HDL Cholesterol levels.
@@ -41,9 +41,9 @@ After re-coding the binary PLINK files to a transposed text file and reading the
 
 We perform association tests for each SNP. For each SNP, we test the following Hypotheses:
 
-$H_0 : \Beta_{variant} = 0$
+$H_0 : \beta_{variant} = 0$
 
-$H_A : \Beta_{variant} \neq 0$
+$H_A : \beta_{variant} \neq 0$
 
 ![alt text](https://github.com/stevturn3/Simulated_GWAS/blob/main/Turnbull_manhattan.png?raw=true)
 
@@ -51,5 +51,32 @@ We create a Manhattan plot to see how chromosomes are correlated to HDL Choleste
 
 # Studies
 
-We compare our results to hose of a ukBB GWAS on the same subject. 
+We compare our results to hose of a ukBB GWAS on the same subject. We expect some differences in results do to our lack of data. Here we display the minimum values on each chromsome.
+
+![alt text]([https://github.com/stevturn3/Simulated_GWAS/blob/main/Turnbull_MinP.png]?raw=true)
+
+Additionally, we take a look at three grouping of these SNPs. We take the UK bio bank p-values as the true p-values of our experiment as it was performed in a similar way but including more data.
+
+a.UK bio bank p-value is not significant and no studies found:
+
+(We note that this is relatively unsurprising since the UK bio bank p-values
+weren’t suggestive of an association, verifying it’s results for these SNPs - at least given the studies that have been conducted)
+rs4846920, rs1112403, rs6532041,rs1036172, rs2819974, rs834793, rs4300315, rs10846772, rs9519977, rs35772501, rs9983496, rs732381
+
+b.Both p-values are significant and no studies found:
+
+(The p-values computed in both our simulated GWAS and the UK bio bank GWAS are very significant so it is surprising there are no studies that show an association. This mean either these results were false positives or the association has not been confirmed within a study)
+rs35617716, rs6073958, rs2740488(Only mention in a study was about age-related muscular degeneration), rs429358 (Not mentioned in any studies related to HDL but appears to be associated with many other phe- notypes/diseases)
+
+c.Both p-values and significant and mentioned in studies on HDL Cholesterol levels:
+
+rs6754295: From Boes E et al., Experimental gerontology, 2009 showed an overall null effect of APOB(the gene that this SNP is located on) on HDL Cholesterol levels. This result was confirmed by Weissglas-Volkov D et al.,Journal of lipid research,2010, as they showed the association is insignificant with a p value of 4.4 × 10−8.
+
+rs10750097: From Boes E et al.,Experimental gerontology,2009: ”rs10750097 (APOA5) never showed an as- sociation in any [of their] studies.” However, Shirts BH et al.,Atherosclerosis, 2009, found an association with ”25OHD-dependent changes in APOA5 promoter activity in HEP3B and HEK293 cells.” These researchers identified an interaction between rs10750097 and low HDL-C levels in individuals with low winter dietary 25OHD.
+
+rs1077835: Consistently found to have an association to HDL Cholesterol levels.Brinkley TE et al.,Journal of applied physiology, 2011, found rs1077835 and other SNPs on the LIPC promoter were found to account for approximately ”20-30%” of HL variation and Hodoglugil U et al., Journal of lipid research,2010, found an association with plasma HDL-C levels.
+
+rs11076175: Consistently found to show ”convincing” association with low HDL-C levels. Carlquist JF et al., Journal of clinical experimental cardiology, 2011, show it was the only SNP (out of a selection of SNPs from lipid-related genes such as ApoF, LIPC, LPL, SCARBI, LCAT, CETP - where rs11076175 is found) found to be significant under the Bonferroni adjusted significance level. GG homozygotes had a significant, 15% reduction in HDL levels.
+
+rs4939883: Found to be significant in many different papers (including Shirts BH et al.,Atherosclerosis,2012) however, the association and effect was not discussed in depth.
 
